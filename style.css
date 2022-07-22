@@ -88,7 +88,7 @@ body{
 .sheet-actions-cont
 {
     height: 3rem;
-    background-color:red;
+    background-color:blue;
     display: flex;
     align-items: center;
     padding-left: 0.5rem;

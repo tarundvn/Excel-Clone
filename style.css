@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.page-actions-cont
+{
+    height: 3rem;
+    background-color: #218c74;   
+    display: flex;
+    padding-left: 1rem;
+    align-items: flex-end;
+}
+
+.page-action
+{
+    margin: 0.5rem;
+    color: #f1f2f6;
+}
+
+.cellprop-actions-cont
+{
+    height: 3rem;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.cellprop-actions-cont > *{
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.font-family-prop
+{
+    padding: 0.2rem;
+}
+
+.cellprop-actions-cont > select
+{
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+.font-size-prop
+{
+    padding: 0.2rem;
+}
+
+.formula-actions-cont
+{
+    height: 2rem;
+    background-color: #ecf0f1;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.formula-actions-cont > *{
+    display: inline-block;
+    margin-right: 0.7rem;
+}
+
+.formula-icon{
+    width: 1.2rem;
+}
+
+.address-bar{
+    width: 5rem;
+}
+
+.formula-bar{
+    width: calc(100vw - 5rem - 0.7rem - 0.7rem - 0.7rem);
+}
+
+.formula-actions-cont > input {
+    border: none;
+    outline: none;
+    height: 70%;
+}
+
+.sheet-actions-cont
+{
+    height: 3rem;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    gap: 1rem;
+}
+
+.sheet-actions-cont > *{
+    display: inline-block;
+}
+
+.sheet-add-icon{
+    width: 2vw;
+}
+
+.sheets-folder-cont
+{
+    height: 80%;
+    width: calc(100vw - 2vw);
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.sheet-folder
+{
+    text-decoration: underline;
+    font-weight: bold;
+    text-decoration-thickness: 3px;
+    font-size: 0.9rem;
+    /*  */
+    padding-left: 1rem;
+}
+
+.grid-cont
+{
+    height: calc(100vh - 11rem);
+}

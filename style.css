@@ -73,6 +73,7 @@ body{
 
 .address-bar{
     width: 5rem;
+    text-align: center;
 }
 
 .formula-bar{
@@ -88,7 +89,7 @@ body{
 .sheet-actions-cont
 {
     height: 3rem;
-    background-color:blue;
+    background-color: #ecf0f1;
     display: flex;
     align-items: center;
     padding-left: 0.5rem;
@@ -126,4 +127,71 @@ body{
 .grid-cont
 {
     height: calc(100vh - 11rem);
+    background-color: #ecf0f1;
+    position: relative;
+    overflow: scroll;
+}
+
+.top-left-dummy-box
+{
+    height: 2rem;
+    width: 2rem;
+    background-color: #747d8c;
+    position: fixed;
+    z-index: 1;
+}
+
+.address-col-cont
+{
+    position: sticky;
+    top: 2rem;
+    left: 0;
+}
+
+.address-row-cont
+{
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 2rem;
+}
+.cells-cont{
+    position: absolute;
+    top: 0rem;
+    left: 2rem;
+}
+
+.address-col
+{
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-row
+{
+    height: 2rem;
+    width: 5rem;
+    text-align: center;
+    border: 1px solid #dfe4ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell
+{
+    height: 2rem;
+    width: 5rem;
+    border: 1px solid #dfe4ea;
+    outline: none;
+}
+
+.row-cont
+{
+    display: flex;
 }

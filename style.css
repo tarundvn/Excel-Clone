@@ -5,27 +5,60 @@
 body{
     padding: 0;
     margin: 0;
+    font-family: "Montserrat", sans-serif;
 }
 
+/* heading-container */
+.heading-con
+{
+  height: 4vh;
+  background-color: #218c74;
+  color: #f1f2f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* page-actions-container */
 .page-actions-cont
 {
-    height: 3rem;
+    height: 5vh;
     background-color: #218c74;   
+    color: #f1f2f6;
     display: flex;
-    padding-left: 1rem;
-    align-items: flex-end;
 }
 
+/* Home,File,Insert,Layout,Help */
 .page-action
 {
-    margin: 0.5rem;
+    height:100%;
+    padding: 0 1rem;
     color: #f1f2f6;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
 }
 
+/* Color Change Logic */
+.page-action:hover {
+    background-color: #f1f2f6;
+    color: #218c74;
+}
+
+#file
+{
+    color: #218c74; 
+    background-color: #f1f2f6;
+}
+
+/* Cell Properties Container : Cut,Copy,Paste,Bold,Italic,UnderLine,etc.. */
 .cellprop-actions-cont
 {
-    height: 3rem;
-    background-color: #ecf0f1;
+    height: 6vh;
+    background-color: #f1f2f6;
     display: flex;
     align-items: center;
     padding-left: 1rem;
@@ -33,63 +66,68 @@ body{
 
 .cellprop-actions-cont > *{
     display: inline-block;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
 }
 
 .font-family-prop
 {
-    padding: 0.2rem;
+    padding: 0.4rem;
 }
 
 .cellprop-actions-cont > select
 {
-    border: none;
-    border-radius: 2px;
-    outline: none;
+    border: 0.6px solid;
+    border-radius: 4px;
 }
 
 .font-size-prop
 {
-    padding: 0.2rem;
+    padding: 0.3rem;
 }
 
+/* Address Bar and Formula Bar */
 .formula-actions-cont
 {
-    height: 2rem;
+    height: 7vh;
     background-color: #ecf0f1;
-    padding-left: 1rem;
     display: flex;
     align-items: center;
 }
 
 .formula-actions-cont > *{
-    display: inline-block;
-    margin-right: 0.7rem;
-}
-
-.formula-icon{
-    width: 1.2rem;
+    height: 60%;
 }
 
 .address-bar{
-    width: 5rem;
-    text-align: center;
+  background-color: #fff;
+  width: 10%;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 500;
+  justify-content: center;
 }
 
 .formula-bar{
-    width: calc(100vw - 5rem - 0.7rem - 0.7rem - 0.7rem);
+  outline: none;
+  border-radius: 0.25rem;
+  width: 90%;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border: 1px solid;
+  font-size: 1.125rem;
 }
 
-.formula-actions-cont > input {
-    border: none;
-    outline: none;
-    height: 70%;
-}
-
+/* Sheets Container */
 .sheet-actions-cont
 {
-    height: 3rem;
+    height: 8vh;
     background-color: #ecf0f1;
+    color: #218c74;
     display: flex;
     align-items: center;
     padding-left: 0.5rem;
@@ -120,13 +158,12 @@ body{
     font-weight: bold;
     text-decoration-thickness: 3px;
     font-size: 0.9rem;
-    /*  */
     padding-left: 1rem;
 }
 
 .grid-cont
 {
-    height: calc(100vh - 11rem);
+    height: calc(100vh - 30vh);
     background-color: #ecf0f1;
     position: relative;
     overflow: scroll;
@@ -148,16 +185,17 @@ body{
     left: 0;
 }
 
+.cells-cont{
+    position: absolute;
+    top: 0rem;
+    left: 2rem;
+}
+
 .address-row-cont
 {
     display: flex;
     position: sticky;
     top: 0;
-    left: 2rem;
-}
-.cells-cont{
-    position: absolute;
-    top: 0rem;
     left: 2rem;
 }
 
@@ -194,4 +232,17 @@ body{
 .row-cont
 {
     display: flex;
+
+}
+
+.color-prop {
+    position: relative;
+}
+.color-prop > input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }

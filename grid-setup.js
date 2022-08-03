@@ -1,11 +1,12 @@
-let rows = 100;
-let cols = 26;
-let addressColCont = document.querySelector(".address-col-cont");
-let addressRowCont = document.querySelector(".address-row-cont");
-let cellsCont = document.querySelector(".cells-cont");
-let addressBar = document.querySelector(".address-bar");
+const cols = 26;
+const rows = 100;
 
+const addressColCont = document.querySelector(".address-col-cont");
+const addressRowCont = document.querySelector(".address-row-cont");
+const cellsCont = document.querySelector(".cells-cont");
+const addressBar = document.querySelector(".address-bar");
 
+// Loop to set the row numbers
 for(let i = 0;i<rows;i++)
 {
     let addressCol = document.createElement("div");
@@ -14,6 +15,7 @@ for(let i = 0;i<rows;i++)
     addressColCont.appendChild(addressCol);
 }
 
+// Loop to set the column titles
 for(let i = 0;i<cols;i++)
 {
     let addressRow = document.createElement("div");
@@ -22,6 +24,7 @@ for(let i = 0;i<cols;i++)
     addressRowCont.appendChild(addressRow);
 }
 
+// Loop to fill the grid
 for(let i = 0;i<rows;i++)
 {
     let rowCont = document.createElement("div");
@@ -31,6 +34,8 @@ for(let i = 0;i<rows;i++)
         let cell = document.createElement("div");
         cell.setAttribute("class" , "cell");
         cell.setAttribute("contenteditable" , "true");
+        cell.setAttribute("rid" , i);
+        cell.setAttribute("cid" , j);
         rowCont.appendChild(cell);
         addListenerforAdressBarDisplay(cell,i,j);
     }

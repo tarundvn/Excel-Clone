@@ -69,6 +69,10 @@ body{
     margin-right: 1.2rem;
 }
 
+.cellprop-actions-cont > *:hover{
+    cursor : pointer;
+}
+
 .font-family-prop
 {
     padding: 0.4rem;
@@ -171,40 +175,40 @@ body{
 
 .top-left-dummy-box
 {
-    height: 2rem;
-    width: 2rem;
+    height: 2.25rem;
+    width: 2.5rem;
     background-color: #747d8c;
-    position: fixed;
+    /* position: fixed; */
     z-index: 1;
 }
 
 .address-col-cont
 {
-    position: sticky;
-    top: 2rem;
+    /* position: sticky; */
+    top: 2.25rem;
     left: 0;
 }
 
 .cells-cont{
     position: absolute;
     top: 0rem;
-    left: 2rem;
+    left: 2.5rem;
 }
 
 .address-row-cont
 {
     display: flex;
-    position: sticky;
+    /* position: sticky; */
     top: 0;
-    left: 2rem;
+    left: 2.5rem;
 }
 
 .address-col
 {
-    height: 2rem;
-    width: 2rem;
+    height: 2.25rem;
+    width: 2.5rem;
     text-align: center;
-    border: 1px solid #dfe4ea;
+    border: 1px solid #808286;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,10 +216,10 @@ body{
 
 .address-row
 {
-    height: 2rem;
-    width: 5rem;
+    height: 2.25rem;
+    width: 8rem;
     text-align: center;
-    border: 1px solid #dfe4ea;
+    border: 1px solid #808286;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,9 +227,9 @@ body{
 
 .cell
 {
-    height: 2rem;
-    width: 5rem;
-    border: 1px solid #dfe4ea;
+    height: 2.25rem;
+    width: 8rem;
+    border: 1px solid #808286;
     outline: none;
 }
 

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="heading-con"> My Excel </div>
+    <div class="heading-con"> Excel </div>
 
     <div class="page-actions-cont">
         <div class="page-action">Home</div>
@@ -21,16 +21,17 @@
         <div class="page-action">Help</div>
     </div>
     <div class="cellprop-actions-cont">
-        <span class="material-icons">
-            content_copy
-        </span>
-        <span class="material-icons">
-            content_cut
-        </span>
-        <span class="material-icons">
-            content_paste
-        </span>
 
+        <span class="material-icons bold">
+            format_bold
+        </span>
+        <span class="material-icons italic">
+            format_italic
+        </span>
+        <span class="material-icons underline">
+            format_underlined
+        </span>
+        
         <select class="font-family-prop">
             <option value="monospace">MonoSpace</option>
             <option value="sans-serif">Sans-Serif</option>
@@ -38,30 +39,22 @@
             <option value="cursive">Cursive</option>
         </select>
         <select class="font-size-prop">
-            <option value="">14</option>
-            <option value="">16</option>
-            <option value="">18</option>
-            <option value="">20</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
         </select>
     
-        <span class="material-icons">
-            format_bold
-        </span>
-        <span class="material-icons">
-            format_italic
-        </span>
-        <span class="material-icons">
-            format_underlined
-        </span>
-        <span class="material-icons">
+        <span class="left material-icons alignment">
             format_align_left
         </span>
-        <span class="material-icons">
+        <span class="center material-icons alignment">
             format_align_center
         </span>
-        <span class="material-icons">
+        <span class="right material-icons alignment">
             format_align_right
         </span>
+
         <div class="color-prop">
             <span class="material-icons">
                 format_color_text
@@ -104,6 +97,7 @@
 
     <script src="./grid-setup.js"></script>
     <script src="./cell-properties.js"></script>
+    <script src="./formula.js"></script>
 
 </body>
 </html>

@@ -5,115 +5,99 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel Clone</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Excel</title>
 </head>
 
 <body>
-    <div class="heading-con">
-        Excel
+    <div class="heading-con"> Excel </div>
+
+    <div class="page-actions-cont">
+        <div class="page-action">Home</div>
+        <div class="page-action" id="file">File</div>
+        <div class="page-action">Insert</div>
+        <div class="page-action">Layout</div>
+        <div class="page-action">Help</div>
     </div>
+    <div class="cellprop-actions-cont">
 
-    <div class="menu-bar">
-        <span class="file-options" id="home">Home</span>
-        <span class="file-options" id="file">File</span>
-        <span class="file-options" id="insert">Insert</span>
-        <span class="file-options" id="layout">Layout</span>
-        <span class="file-options" id="help">Help</span>
-    </div>
-
-    <div class="options">
-        <i class="option opt-icn far fa-copy"></i>
-        <i class="option opt-icn fas fa-cut"></i>
-        <i class="option opt-icn far fa-clipboard"></i>
-
-        <select class="option font-family-sel">
-            <option value="cursive" class=" font-family" id="cursive">Cursive</option>
-            <option value="monospace" class=" font-family" id="monospace">Monospace</option>
-            <option value="sans-serif" class=" font-family" id="sans-serif">Sans Serif</option>
-            <option value="fantasy" class=" font-family" id="fantasy">Fantasy</option>
-            <option value="serif" class=" font-family" id="serif">Serif</option>
+        <span class="material-icons bold">
+            format_bold
+        </span>
+        <span class="material-icons italic">
+            format_italic
+        </span>
+        <span class="material-icons underline">
+            format_underlined
+        </span>
+        
+        <select class="font-family-prop">
+            <option value="monospace">MonoSpace</option>
+            <option value="sans-serif">Sans-Serif</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="cursive">Cursive</option>
         </select>
-
-        <select class="option font-size-sel">
-            <option id="12" value="12" class="size">12</option>
-            <option id="14" value="14" class="size">14</option>
-            <option id="16" value="16" class="size">16</option>
-            <option id="18" value="18" class="size">18</option>
-            <option id="20" value="20" class="size">20</option>
-            <option id="22" value="22" class="size">22</option>
+        <select class="font-size-prop">
+            <option value="14">14</option>
+            <option value="16">16</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
         </select>
+    
+        <span class="left material-icons alignment">
+            format_align_left
+        </span>
+        <span class="center material-icons alignment">
+            format_align_center
+        </span>
+        <span class="right material-icons alignment">
+            format_align_right
+        </span>
 
-        <i id="bold" class="option opt-icn fas fa-bold"></i>
-        <i id="italic" class="option opt-icn fas fa-italic"></i>
-        <i id="underline" class="option opt-icn fas fa-underline"></i>
-        <i id="left" class="option opt-icn fas fa-align-left"></i>
-        <i id="center" class="option opt-icn fas fa-align-center"></i>
-        <i id="right" class="option opt-icn fas fa-align-right"></i>
-
-        <div class="color-div font-col-div">
-            <i class="fas fa-tint"></i>
-            <input class="option color-sel" type="color" id="font-col">
+        <div class="color-prop">
+            <span class="material-icons">
+                format_color_text
+            </span>
+            <input type="color" class="font-color-prop">
         </div>
-
-        <div class="color-div bg-col-div">
-            <i class="fas fa-fill-drip"></i>
-            <input class="option color-sel" type="color" id="bg-col">
-        </div>
-    </div>
-
-
-    <div class="formula-bar">
-        <div class="formula-item cell-display"></div>
-        <img class="formula-item fx" src="fx.png" alt="">
-        <input type="text" class="formula-item formula"
-            placeholder="Formula must be space separated and can be set via this formula bar only!">
-    </div>
-
-    <div class="main-con row-col">
-
-        <div class="main-con-div con1 col-head-con blank-box-con">
-            <div class="blank-box">
-            </div>
-            <div class="col-head">
-            </div>
-
-        </div>
-
-        <div class="main-con-div con2 row-no-con cells-con">
-            <div class="row-no">
-
-            </div>
-
-            <div class="cells">
-
-            </div>
+        <div class="color-prop">
+            <span class="material-icons">
+                format_color_fill
+            </span>
+            <input type="color" class="BGcolor-prop">
         </div>
     </div>
 
+    <div class="formula-actions-cont">
+        <input type="text" readonly class="address-bar">
+        <img class="formula-icon" src="https://img.icons8.com/ios/50/000000/formula-fx.png" />
+        <input type="text" class="formula-bar" placeholder="Formula must be space separated and can be set via this formula bar only!">
     </div>
 
-    <div class="sheets">
-        <i class="sheet-item add-sheet far fa-plus-square fa-2x"></i>
 
-        <div class="sheet-item sheets-con">
-            <div class="sheet">Sheet-1</div>
+    <div class="grid-cont">
+        <div class="top-left-dummy-box"></div>
+        <div class="address-col-cont"></div>
+        <div class="cells-cont">
+            <div class="address-row-cont"></div>
         </div>
-
     </div>
 
-    <script src="https://kit.fontawesome.com/e12eb12e59.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="grid-setup.js"></script>
-    <script src="properties.js"></script>
-    <script src="cycleDetection.js"></script>
-    <script src="graph.js"></script>
-    <script src="formula.js"></script>
+    <div class="sheet-actions-cont">
+        <div class="sheet-add-icon">
+            <span class="material-icons">
+                post_add
+            </span>
+        </div>
+        <div class="sheets-folder-cont">
+            <div class="sheet-folder">Sheet1</div>
+        </div>
+    </div>
+
+    <script src="./grid-setup.js"></script>
+    <script src="./cell-properties.js"></script>
+    <script src="./formula.js"></script>
+
 </body>
-
 </html>

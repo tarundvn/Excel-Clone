@@ -1,63 +1,54 @@
 const cols = 26;
 const rows = 100;
 
-const colHead = document.querySelector(".col-head");
-const rowNo = document.querySelector(".row-no");
-const cells = document.querySelector(".cells");
-
-let selCell = undefined;
-// Loop to set the column titles
-
-for (let i = 0; i < cols; i++) {
-  let colTitle = document.createElement("div");
-  colTitle.classList.add("cell-wt", "cell", "border");
-  colTitle.innerText = String.fromCharCode(65 + i);
-  colHead.appendChild(colTitle);
-}
+const addressColCont = document.querySelector(".address-col-cont");
+const addressRowCont = document.querySelector(".address-row-cont");
+const cellsCont = document.querySelector(".cells-cont");
+const addressBar = document.querySelector(".address-bar");
 
 // Loop to set the row numbers
+for(let i = 0;i<rows;i++)
+{
+    let addressCol = document.createElement("div");
+    addressCol.setAttribute("class" , "address-col");
+    addressCol.innerText = i+1;
+    addressColCont.appendChild(addressCol);
+}
 
-for (let i = 0; i < rows; i++) {
-  let currRow = document.createElement("div");
-  currRow.classList.add("cell-ht", "cell", "border");
-  currRow.innerText = i + 1;
-  rowNo.appendChild(currRow);
+// Loop to set the column titles
+for(let i = 0;i<cols;i++)
+{
+    let addressRow = document.createElement("div");
+    addressRow.setAttribute("class" , "address-row");
+    addressRow.innerText = String.fromCharCode(65 + i);
+    addressRowCont.appendChild(addressRow);
 }
 
 // Loop to fill the grid
-
-for (let i = 0; i < rows; i++) {
-  let currRow = document.createElement("div");
-  currRow.classList.add("excel-row");
-
-  for (let j = 0; j < cols; j++) {
-    let currCell = document.createElement("div");
-    currCell.classList.add("cell-wt", "act-cell", "border", "excel-cell");
-    currCell.setAttribute("contenteditable", "true");
-    const cellId = String.fromCharCode(65 + j) + (i + 1);
-    currCell.setAttribute("id", cellId);
-    currCell.setAttribute("rowIdx", i);
-    currCell.setAttribute("colIdx", j);
-    currCell.setAttribute("spellcheck", "false");
-    currRow.appendChild(currCell);
-  }
-
-  cells.appendChild(currRow);
+for(let i = 0;i<rows;i++)
+{
+    let rowCont = document.createElement("div");
+    rowCont.setAttribute("class" , "row-cont");
+    for(let j= 0;j<cols;j++)
+    {
+        let cell = document.createElement("div");
+        cell.setAttribute("class" , "cell");
+        cell.setAttribute("contenteditable" , "true");
+        cell.setAttribute("spellcheck" , "false");
+        //Attributes for cell and storage identification
+        cell.setAttribute("rid" , i);
+        cell.setAttribute("cid" , j);
+        rowCont.appendChild(cell);
+        addListenerforAdressBarDisplay(cell,i,j);
+    }
+    cellsCont.appendChild(rowCont);
 }
 
-const allCells = $(".excel-cell");
-
-allCells.on("click", handleClick);
-
-function handleClick() {
-  if (selCell != undefined) {
-    selCell.classList.remove("active-cell");
-  }
-
-  selCell = this;
-  selCell.classList.add("active-cell");
-  const currCell = this;
-  const id = currCell.getAttribute("id");
-  const cellDisplay = document.querySelector(".cell-display");
-  cellDisplay.innerText = id;
+function addListenerforAdressBarDisplay(cell,i,j)
+{
+    cell.addEventListener("click",(e) => {
+        let rowId = i + 1;
+        let colId = String.fromCharCode(65 + j);
+        addressBar.value = `${colId}${rowId}`;
+    });
 }
